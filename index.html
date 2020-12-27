@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <!-- 上述对于自定义的css将不生效，修改为下面这句 -->
+    <meta http-equiv="Content-Security-Policy"
+          content="connect-src *; default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; script-src * 'unsafe-inline'; img-src * data: content:;">
+    <!-- CSP:内容安全政策，实质上的白名单制度，能够防止xss等攻击 -->
+    <!-- 要设置允许请求数据的话，则需要设置Content-Security-Policy的connect-src *，意思是可以请求到任何的url -->
+
+    <!-- showdown -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script> -->
+    
+
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>Notepad Version 0.1 test</title>
+    
+    <link href="./pure-style.css" rel="stylesheet" type="text/css" id="mainstyle"/>
+
+  </head>
+  <body id="indexBody"> 
+    <!-- <button id="btnInsert" onclick=chCharSet()>clickme</button> -->
+    <div id="txtArea">
+      <textarea id="txtEditor" spellcheck="false" onkeyup=mdSwitchWithMDIt()></textarea>
+    </div>
+    <div id='txtShow'></div>
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>

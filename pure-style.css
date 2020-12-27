@@ -1,0 +1,36 @@
+body,html{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  #txtEditor{
+    width: 99%;
+    height: 99%;
+    resize: none;
+    outline: none;
+    border-width: 0 0 0 0;
+    font-size: 18px;
+    font-family: "Microsoft Yahei","Open Sans","YouYuan","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    
+  }
+  
+  #txtArea{
+    float: left;
+    width: 50%;
+    height: 100%;
+    
+  }
+  #txtShow{
+    float: right;
+    width: 50%;
+    height: 100%;
+    overflow:auto;
+  }
+
+  img {
+    max-width: 400px;
+    
+    
+  }

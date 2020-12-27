@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy"
+          content="connect-src *; default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; script-src * 'unsafe-inline'; img-src * data: content:;">
+        <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+        
+    </head>
+    <body>
+        
+        <div class="ex-div">
+            <label>请选择导出的格式</label><br/>
+
+            <select id="paperSel" onclick=driver()>
+                <option value="Letter"  selected="true">Letter</option>
+                <option value="A3">A3</option>
+                <option value="A4">A4</option>
+                <option value="A5">A5</option>
+                <option value="Legal">Legal</option>
+                <option value="Tabloid">Tabloid</option>
+                <option value="custom" >自定义</option>
+            </select>
+            <label id='lb1'></label>
+            <br/>
+            <div id="custom-div" style="display: none;" >
+                <label>format:</label>
+                <label>height</label>
+                <input id="inheight"/>
+                <select id="heightSel">
+                    <option value="cm"  selected="true">cm</option>
+                    <option value="mm">mm</option>
+                    <option value="in">inch</option>
+                    <option value="px">px</option>
+                </select>
+                <label>width</label>
+                <input id="inwidth"/>
+                <select id="widthSel">
+                    <option value="cm"  selected="true">cm</option>
+                    <option value="mm">mm</option>
+                    <option value="in">inch</option>
+                    <option value="px">px</option>
+                </select>
+            </div>
+            <br />
+            <button onclick=submit()>clickme</button>
+            <label id="lb2"></label>
+        </div>
+        <script src="export-settings.js"></script>
+    </body>
+</html>
